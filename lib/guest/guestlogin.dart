@@ -53,7 +53,7 @@ class _GuestLoginState extends State<GuestLogin> {
                   style: TextStyle(
                       fontFamily: 'Battambang-bold',
                       color: Color(0xff0B0C7F),
-                      fontSize: 22),
+                      fontSize: 20),
                 ),
                 const SizedBox(
                   height: 30,
