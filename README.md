@@ -1,6 +1,6 @@
 # usea_app
 
-A new Flutter project.
+learning Flutter
 
 ## Getting Started
 
