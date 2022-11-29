@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:usea_app/student/StudentLogin.dart';
+import 'package:usea_app/widget/Button.dart';
+
+import 'guest/GuestLogin.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,9 +32,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  //convert hex color to flutter color
+  // convert hex color to flutter color
   // int colorHex(String color) {
-  //   String hex = '0xff' + color;
+  //   String hex = '0xff$color';
   //   hex.replaceAll('#', '');
   //   int finalColor = int.parse(hex);
   //   return finalColor;
@@ -43,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            'images/usea_logo.png',
+            'assets/images/usea_logo.png',
             width: 170,
           ),
           const SizedBox(
@@ -53,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
             'សាកលវិទ្យាល័យ សៅស៍អ៊ីសថ៍អេយសៀ',
             style: TextStyle(
               fontSize: 18,
-              fontFamily: 'Khmer-moul',
+              fontFamily: 'Khmer-muol-light',
               color: Color(0xff0B0C7F),
             ),
           ),
@@ -76,39 +80,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontSize: 22),
           ),
           const SizedBox(
-            height: 30,
+            height: 20,
           ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              maximumSize: const Size(200, 50),
-              backgroundColor: const Color(0xff0B0C7F),
-              shape: const StadiumBorder()
-            ),
-            onPressed: () {},
-            child: const Center(
-              child: Text(
-                "គណនីភ្ញៀវ",
-                style: TextStyle(fontFamily: 'Battambang-bold', fontSize: 18),
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                maximumSize: const Size(200, 50),
-                backgroundColor: const Color(0xff0B0C7F),
-                shape: const StadiumBorder()
-            ),
-            onPressed: () {},
-            child: const Center(
-              child: Text(
-                "គណនីនិស្សិត",
-                style: TextStyle(fontFamily: 'Battambang-bold', fontSize: 18),
-              ),
-            ),
-          ),
+         const Button('គណនីភ្ញៀវ', GuestLogin()),
+         const Button('គណនីនិស្សិត', StudentLogin())
         ],
       ),
     );
