@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:usea_app/guest/MainGuest.dart';
 
-void main() {
-  runApp(const GuestLogin());
-}
 
 class GuestLogin extends StatefulWidget {
   const GuestLogin({Key? key}) : super(key: key);
@@ -23,7 +21,7 @@ class _GuestLoginState extends State<GuestLogin> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'images/usea_logo.png',
+                  'assets/images/usea_logo.png',
                   width: 170,
                 ),
                 const SizedBox(
@@ -33,7 +31,7 @@ class _GuestLoginState extends State<GuestLogin> {
                   'សាកលវិទ្យាល័យ សៅស៍អ៊ីសថ៍អេយសៀ',
                   style: TextStyle(
                     fontSize: 18,
-                    fontFamily: 'Khmer-moul',
+                    fontFamily: 'Khmer-muol-light',
                     color: Color(0xff0B0C7F),
                   ),
                 ),
@@ -53,40 +51,48 @@ class _GuestLoginState extends State<GuestLogin> {
                   style: TextStyle(
                       fontFamily: 'Battambang-bold',
                       color: Color(0xff0B0C7F),
-                      fontSize: 20),
+                      fontSize: 18),
                 ),
                 const SizedBox(
                   height: 30,
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      maximumSize: const Size(200, 50),
-                      backgroundColor: const Color(0xff0B0C7F),
-                      shape: const StadiumBorder()),
-                  onPressed: () {},
-                  child: const Center(
-                    child: Text(
+                OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    maximumSize: const Size.fromWidth(220),
+                    shape: const StadiumBorder(),
+                  ),
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const MainGuest(),),);
+                  },
+                  child: ListTile(
+                    title: const Text(
                       "លេខទូរស័ព្ទ",
                       style: TextStyle(
-                          fontFamily: 'Battambang-bold', fontSize: 18),
+                          fontFamily: 'Battambang-bold',
+                          fontSize: 16,
+                          color: Color(0xff0B0C7F)),
                     ),
+                    leading: Image.asset('assets/images/phone_auth_icon.png'),
                   ),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      maximumSize: const Size(200, 50),
-                      backgroundColor: const Color(0xff0B0C7F),
-                      shape: const StadiumBorder()),
+                OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    maximumSize: const Size.fromWidth(220),
+                    shape: const StadiumBorder(),
+                  ),
                   onPressed: () {},
-                  child: const Center(
-                    child: Text(
+                  child: ListTile(
+                    title: const Text(
                       "គណនី Google",
                       style: TextStyle(
-                          fontFamily: 'Battambang-bold', fontSize: 18),
+                          fontFamily: 'Battambang-bold',
+                          fontSize: 16,
+                          color: Color(0xff0B0C7F)),
                     ),
+                    leading: Image.asset('assets/images/google_auth_icon.png'),
                   ),
                 ),
               ],
