@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:usea_app/student/StudentLogin.dart';
-import 'package:usea_app/widget/Button.dart';
-
-import 'guest/GuestLogin.dart';
+import 'package:flutter/services.dart';
+import 'package:usea_app/guest/MainGuest.dart';
+import 'package:usea_app/widget/CustomButton.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +12,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SafeArea(
+      theme: ThemeData(primaryColor: const Color(0xff0B0C7F)),
+      home: const SafeArea(
         child: Scaffold(
           body: MyHomePage(),
         ),
@@ -82,8 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
           const SizedBox(
             height: 20,
           ),
-         const Button('គណនីភ្ញៀវ', GuestLogin()),
-         const Button('គណនីនិស្សិត', StudentLogin())
+          const Button('login', MainGuest())
         ],
       ),
     );

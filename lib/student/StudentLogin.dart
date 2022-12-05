@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:usea_app/student/MainStudent.dart';
 import 'package:usea_app/student/home/StudentHome.dart';
-import 'package:usea_app/widget/Button.dart';
-import 'package:usea_app/widget/EditText.dart';
+import 'package:usea_app/widget/CustomButton.dart';
+import 'package:usea_app/widget/CustomEditText.dart';
 
 class StudentLogin extends StatefulWidget {
   const StudentLogin({Key? key}) : super(key: key);
