@@ -3,6 +3,7 @@ import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:usea_app/guest/Event/GuestEvent.dart';
 import 'package:usea_app/student/home/StudentHome.dart';
 import 'package:usea_app/widget/CategoryItem.dart';
+import 'package:usea_app/widget/CustomColor.dart';
 
 class GuestHome extends StatefulWidget {
   const GuestHome({Key? key}) : super(key: key);
@@ -92,7 +93,7 @@ class _GuestHomeState extends State<GuestHome> {
                               style: TextStyle(
                                 fontSize: 13,
                                 fontFamily: 'Khmer-muol-light',
-                                color: Color(0xff0B0C7F),
+                                color: DarkBlue,
                               ),
                             ),
                             Text(
@@ -107,7 +108,7 @@ class _GuestHomeState extends State<GuestHome> {
                         ),
                         const Icon(
                           Icons.notifications_active_rounded,
-                          color: Color(0xff0B0C7F),
+                          color: DarkBlue,
                         ),
                       ],
                     ),
