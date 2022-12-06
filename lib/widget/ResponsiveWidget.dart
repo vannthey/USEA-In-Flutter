@@ -10,8 +10,10 @@ class ResponsiveWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constrains) {
       if (constrains.maxWidth < 768) {
+        //do something
         return hdpi;
       } else {
+        //do something
         return xhdpi;
       }
     });
