@@ -15,17 +15,16 @@ class StudentStudyPlan extends StatefulWidget {
 class _StudentStudyPlanState extends State<StudentStudyPlan> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        leading: IconButton(onPressed: () => Navigator.pop(context), icon: const Icon(Icons.arrow_back_ios_rounded),color: DarkBlue,),
-        title: Text(
-          'ផែនការសិក្សា',
-          style: titleAppbar,
-        ),
+    centerTitle: true,
+    backgroundColor: Colors.white,
+    leading: IconButton(onPressed: () => Navigator.pop(context), icon: const Icon(Icons.arrow_back_ios_rounded),color: DarkBlue,),
+    title: Text(
+      'ផែនការសិក្សា',
+      style: titleAppbar,
+    ),
       ),
-    ));
+    );
   }
 }

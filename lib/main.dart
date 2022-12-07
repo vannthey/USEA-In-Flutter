@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:usea_app/guest/MainGuest.dart';
 import 'package:usea_app/widget/CustomButton.dart';
+import 'package:usea_app/widget/CustomColor.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,10 +17,9 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primaryColor: const Color(0xff0B0C7F)),
-      home: const SafeArea(
+      home: SafeArea(
         child: Scaffold(
           body: MyHomePage(),
         ),
@@ -36,13 +36,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  // convert hex color to flutter color
-  // int colorHex(String color) {
-  //   String hex = '0xff$color';
-  //   hex.replaceAll('#', '');
-  //   int finalColor = int.parse(hex);
-  //   return finalColor;
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
             style: TextStyle(
               fontSize: 18,
               fontFamily: 'Khmer-muol-light',
-              color: Color(0xff0B0C7F),
+              color: DarkBlue,
             ),
           ),
           const Text(
@@ -80,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
             'គណនី',
             style: TextStyle(
                 fontFamily: 'Battambang-bold',
-                color: Color(0xff0B0C7F),
+                color: DarkBlue,
                 fontSize: 22),
           ),
           const SizedBox(

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:usea_app/guest/MainGuest.dart';
-import 'package:usea_app/guest/home/GuestHome.dart';
 import 'package:usea_app/student/score/StudentScore.dart';
 import 'package:usea_app/student/studyplan/StudentStudyPlan.dart';
 import 'package:usea_app/widget/CategoryItem.dart';
+
+import '../../guest/MainGuest.dart';
+import '../profile/StudentProfile.dart';
 
 class MainStudent extends StatefulWidget {
   const MainStudent({Key? key}) : super(key: key);
@@ -105,18 +106,19 @@ class _MainStudentState extends State<MainStudent> {
                         ),
                       ],
                     ),
-                    const CircleAvatar(
-                      maxRadius: 35,
-                      backgroundImage:
-                          AssetImage("assets/images/usea_logo.png"),
+                    GestureDetector(
+                      onTap: () =>
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const StudentProfile(),)),
+                      child: const CircleAvatar(
+                        maxRadius: 35,
+                        backgroundImage:
+                            AssetImage("assets/images/usea_logo.png"),
+                      ),
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
+                const Flexible(child: SizedBox(height: 10,)),
                 Flexible(
-                  flex: 1,
                   child: GridView.builder(
                     itemCount: rankCredit.length,
                     gridDelegate:
@@ -165,7 +167,7 @@ class _MainStudentState extends State<MainStudent> {
                   ),
                 ),
                 Flexible(
-                    flex: 6,
+                    flex: 5,
                     child: GridView.builder(
                         itemCount: title.length,
                         gridDelegate:
