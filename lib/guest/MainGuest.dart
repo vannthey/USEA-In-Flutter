@@ -10,7 +10,7 @@ class MainGuest extends StatefulWidget {
 }
 
 class _MainGuestState extends State<MainGuest> {
-  List selectOptionNav = [const GuestHome(),const GuestMore()];
+  List selectOptionNav = [const GuestHome(), const GuestMore()];
 
   int navigateSelected = 0;
 
@@ -23,11 +23,10 @@ class _MainGuestState extends State<MainGuest> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: Container(
         child: selectOptionNav.elementAt(navigateSelected),
       ),
-      bottomNavigationBar:  BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -39,7 +38,7 @@ class _MainGuestState extends State<MainGuest> {
         currentIndex: navigateSelected,
         selectedItemColor: const Color(0xff0B0C7F),
         selectedLabelStyle:
-        const TextStyle(fontFamily: 'Battambang-regular',fontSize: 16),
+            const TextStyle(fontFamily: 'Battambang-regular', fontSize: 16),
         onTap: onItemSelected,
       ),
     );

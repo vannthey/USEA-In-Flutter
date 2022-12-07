@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:usea_app/student/MainStudent.dart';
 import 'package:usea_app/student/home/StudentHome.dart';
+import 'package:usea_app/student/MainStudent.dart';
 import 'package:usea_app/widget/CustomButton.dart';
 import 'package:usea_app/widget/CustomEditText.dart';
 

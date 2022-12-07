@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:usea_app/guest/Event/GuestEvent.dart';
-import 'package:usea_app/student/home/StudentHome.dart';
+import 'package:usea_app/student/MainStudent.dart';
 import 'package:usea_app/widget/CategoryItem.dart';
 import 'package:usea_app/widget/CustomColor.dart';
 
